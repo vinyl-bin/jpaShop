@@ -22,7 +22,7 @@ import static org.junit.Assert.fail;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@Transactional  //롤백해서 다른 테스트에 영향 안끼치게 함.
+@Transactional  //롤백해서 다른 테스트에 영향 안끼치게 함. 그 외에도 다른역할해서 이걸 없애면 안됨. 롤백하고 싶은면 다른 어노테이션 붙여야함
 public class OrderServiceTest {
 
     @Autowired EntityManager em;

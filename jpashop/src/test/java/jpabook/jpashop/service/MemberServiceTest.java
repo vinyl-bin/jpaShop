@@ -17,7 +17,8 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@Transactional    //롤백하는 것
+@Transactional
+//@Rollback(value = false)
 public class MemberServiceTest {
 
     @Autowired MemberService memberService;
