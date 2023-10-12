@@ -27,7 +27,13 @@ public class MemberService {
 
     private void validateDuplicateMember(Member member) {     //중복되었을 때 실행됨
         List<Member> findMembers = memberRepository.findByName(member.getName());
+//        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+//        System.out.println(member);
+//        findMembers.add(member);
+//        findMembers.add(member);
+//        System.out.println(findMembers);
         if (!findMembers.isEmpty()) {
+//            System.out.println("이미 존재");
             throw new IllegalStateException("이미 존재하는 회원입니다.");
         }
     }
